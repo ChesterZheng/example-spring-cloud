@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: consumer-movie-ribbon-hystrix-with-project-path
+server:
+  port: ${port}
+  context-path: /ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka.server}
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    home-page-url-path: /ribbon
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}

@@ -1,0 +1,35 @@
+# 配置应用名称
+spring:
+  application:
+    name: discovery-eureka-1
+server:
+  port: ${port}
+# 日志级别设置
+logging:
+  level:
+    root: INFO
+# 安全校验
+security:
+  basic:
+    enabled: true
+  user:
+    name: chester
+    password: chester
+# Eureka注册中心配置
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: ${eureka.server}
+    healthcheck: 
+      enabled: true
+  #关闭Eureka自我保护模式
+#  server:
+#    enable-self-preservation: false
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    # 自定义Eureka名称
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}

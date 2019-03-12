@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: file-upload
+  http:
+    multipart:
+      max-file-size: 2000MB #MaxFileSize默认1M
+      max-request-size: 2500MB #MaxRequestSize默认10M
+server:
+  port: ${port}
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka.server}
+  instance:
+    prefer-ip-address: true
+    # 自定义Eureka名称
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+      

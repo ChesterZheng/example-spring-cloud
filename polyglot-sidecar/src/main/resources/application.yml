@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: polyglot-sidecar
+server:
+  port: ${port}
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka.server}
+  instance:
+    prefer-ip-address: true
+sidecar:
+  port: 8060
+  health-uri: http://localhost:8060/health.json

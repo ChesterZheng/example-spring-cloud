@@ -1,0 +1,17 @@
+server:
+  port: ${port}
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/chester_zheng/example-spring-cloud-config-repo #公用配置
+          username: Chester_Zheng
+          password: avrillavigne1005
+
+encrypt:
+  key-store:
+    location: classpath:/server.jks
+    password: letmein
+    alias: mytestkey
+    secret: changeme

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: consumer-movie-ribbon-hystrix-with-management-port
+server:
+  port: ${port}
+  context-path: /ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka.server}
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+management.port: 8081
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000

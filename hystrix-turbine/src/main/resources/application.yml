@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: hystrix-turbine
+server:
+  port: ${port}
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka.server}
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+turbine:
+  aggregator:
+    clusterConfig: default
+  appConfig:  consumer-movie-ribbon-hystrix,consumer-movie-feign-hystrix
+  clusterNameExpression: new String("default")
+  combine-host-port: true

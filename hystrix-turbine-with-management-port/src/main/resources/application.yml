@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: hystrix-turbine-with-management-port
+server:
+  port: ${port}
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka.server}
+  instance:
+    prefer-ip-address: true
+turbine:
+  aggregator:
+    clusterConfig: CONSUMER-MOVIE-RIBBON-HYSTRIX-WITH-MANAGEMENT-PORT
+  appConfig:  consumer-movie-ribbon-hystrix-with-management-port

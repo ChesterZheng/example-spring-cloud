@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: consumer-movie-feign-without-hystrix
+server:
+  port: ${port}
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka.server}
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+#Feign日志配置, 针对每一个FeginClient实例做配置
+logging:
+  level:
+    com.example.cloud.service.IUserCustomFeignClient: DEBUG

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: consumer-movie-ribbon-hystrix-propagation
+server:
+  port: ${port}
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka.server}
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000

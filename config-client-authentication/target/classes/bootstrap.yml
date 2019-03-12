@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: foobar
+  cloud:
+    config:
+      uri: http://chester:chester@localhost:8080
+      profile: dev
+      label: master # 当ConfigServer后端存储为Git的时候 默认就是master分支

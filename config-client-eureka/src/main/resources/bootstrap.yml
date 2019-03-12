@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ${application.name}
+  cloud:
+    config:
+      #标识ConfigServer启动服务发现，此配置项需与Eureka配合使用
+      discovery:
+        enabled: true
+        service-id: config-server-with-eureka     
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka.server}
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}

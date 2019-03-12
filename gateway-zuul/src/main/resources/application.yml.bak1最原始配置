@@ -1,0 +1,23 @@
+# 配置应用名称
+spring:
+  application:
+    name: gateway-zuul
+server:
+  port: ${port}
+# Eureka注册中心配置
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka.server}
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    # 自定义Eureka名称
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+zuul:
+  #暴力忽略所有微服务
+  ignored-services: '*'
+  #自定义路由名称
+  routes:
+    provider-user: /user/**
+    

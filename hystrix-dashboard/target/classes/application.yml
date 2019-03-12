@@ -1,0 +1,17 @@
+# 配置应用名称
+spring:
+  application:
+    name: hystrix-dashboard
+server:
+  port: ${port}
+# 日志级别设置
+logging:
+  level:
+    root: INFO
+# 安全校验
+security:
+  basic:
+    enabled: true
+  user:
+    name: chester
+    password: chester

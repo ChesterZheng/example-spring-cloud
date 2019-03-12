@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: hystrix-turbine-with-project-path
+server:
+  port: ${port}
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka.server}
+  instance:
+    prefer-ip-address: true
+turbine:
+  aggregator:
+    clusterConfig: CONSUMER-MOVIE-RIBBON-HYSTRIX-WITH-PROJECT-PATH
+  appConfig:  consumer-movie-ribbon-hystrix-with-project-path
+  instanceUrlSuffix: 
+    CONSUMER-MOVIE-RIBBON-HYSTRIX-WITH-PROJECT-PATH: /ribbon/hystrix.stream

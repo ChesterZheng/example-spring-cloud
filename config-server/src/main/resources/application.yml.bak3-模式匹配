@@ -1,0 +1,16 @@
+server:
+  port: ${port}
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/chester_zheng/example-spring-cloud-config-repo #公用配置
+          username: Chester_Zheng
+          password: avrillavigne1005
+          repos:
+            simple: 
+              uri: https://gitee.com/chester_zheng/simple
+            special:
+              pattern: special*/dev*, special/test*
+              uri: https://gitee.com/chester_zheng/special

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: consumer-movie-ribbon-without-eureka
+server:
+  port: ${port}
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka.server}
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+#Ribbon脱离Eureka配置
+ribbon:
+  eureka:
+    enabled: false
+spring-cloud-provider-user:
+  ribbon:
+    listOfServers: localhost:7900
