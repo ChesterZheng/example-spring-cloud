@@ -10,7 +10,7 @@ public class SideCarApplication {
 
 	/**
 	 * 
-	 * @Author ZhengXiaoChen
+	 * @Author Chester_Zheng
 	 * @Description SpringCloud集成非java项目使用sidecar
 	 * @Date 2019年2月25日下午4:52:49
 	 * @param args

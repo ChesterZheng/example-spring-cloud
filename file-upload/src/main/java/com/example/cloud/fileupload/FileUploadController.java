@@ -18,7 +18,7 @@ public class FileUploadController {
 	 * 测试方法
 	 * 访问 http://localhost:8050/index.html
 	 * 使用命令 curl -F "file=@文件全名" localhost:8050/upload
-	 * @Author ZhengXiaoChen
+	 * @Author Chester_Zheng
 	 * @Description 使用Zuul进行文件上传
 	 * @Date 2019年2月22日下午3:29:48
 	 * @param file

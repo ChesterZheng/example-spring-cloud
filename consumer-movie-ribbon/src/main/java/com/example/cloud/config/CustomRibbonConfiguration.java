@@ -10,7 +10,7 @@ import com.netflix.loadbalancer.RandomRule;
 /**
  * 自定义Ribbon配置
  * 
- * @Author ZhengXiaoChen
+ * @Author Chester_Zheng
  * @Date 2018年12月10日下午5:52:44
  * @Tags
  */
@@ -20,7 +20,7 @@ public class CustomRibbonConfiguration {
 
 	/**
 	 * 
-	 * @Author ZhengXiaoChen
+	 * @Author Chester_Zheng
 	 * @Description 负载均衡策略采用【随机】
 	 * @Date 2018年12月10日下午5:54:54
 	 * @return

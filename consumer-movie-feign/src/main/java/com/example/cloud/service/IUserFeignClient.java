@@ -27,7 +27,7 @@ public interface IUserFeignClient {
 
 	/**
 	 * 
-	 * @Author ZhengXiaoChen
+	 * @Author Chester_Zheng
 	 * @Description 本方法是【错误示例】调用会报错 正确的方法在本方法下面
 	 * @Date 2018年12月12日下午4:35:55
 	 * @param user
@@ -40,7 +40,7 @@ public interface IUserFeignClient {
 
 	/**
 	 * 
-	 * @Author ZhengXiaoChen
+	 * @Author Chester_Zheng
 	 * @Description 本方法是【正确示例】调用成功 错误的方法在本方法上面
 	 * @Date 2018年12月12日下午4:45:01
 	 * @param id

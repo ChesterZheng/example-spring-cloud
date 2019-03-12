@@ -23,7 +23,7 @@ public class MovieController {
 
 	/**
 	 * 
-	 * @Author ZhengXiaoChen
+	 * @Author Chester_Zheng
 	 * @Description 断路器方法必须与原方法的参数和返回值一致
 	 * @Date 2018年12月13日下午6:02:34
 	 * @param id
